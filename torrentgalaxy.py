@@ -18,7 +18,7 @@ except ImportError:
 
 
 class torrentgalaxy(object):
-    url = 'https://torrentgalaxy.to/'
+    url = 'https://tgx.rs/'
     name = 'TorrentGalaxy'
     supported_categories = {
         'all': '',
@@ -37,7 +37,7 @@ class torrentgalaxy(object):
         count_div, = -1,
         get_size, get_seeds, get_leechs = False, False, False
         this_record = {}
-        url = 'https://torrentgalaxy.to'
+        url = 'https://tgx.rs'
 
         def handle_starttag(self, tag, attrs):
             if tag == self.DIV:
@@ -94,7 +94,7 @@ class torrentgalaxy(object):
 
     def search(self, what, cat='all'):
         query = str(what).replace(r' ', '+')
-        search_url = 'https://torrentgalaxy.to/torrents.php?'
+        search_url = 'https://tgx.rs/torrents.php?'
         full_url = \
             search_url + \
             self.supported_categories[cat.lower()] + \
